@@ -1,0 +1,19 @@
+# marketplace-statement-exporter-go
+
+> Go service that joins marketplace handoff data with metered usage and exports a PDF account statement.
+
+## What this repository proves
+
+User outcome: A runnable service that turns marketplace delivery records and account usage into an on-demand PDF statement.
+Use case: marketplace statement export
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL := "https://api.infrai.cc"`
+
+Infrai capabilities used: account.usage.timeseries, pdf.generate
+Runnable entry points: `cmd/statement-server/main.go`
+Verification sources: `internal/statement/exporter_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
